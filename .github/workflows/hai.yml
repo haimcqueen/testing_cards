@@ -1,4 +1,4 @@
-name: CI # this is just metadata
+name: hai_test_flow # this is just metadata
 
 on: [push, pull_request] # when should this config file run?
 
