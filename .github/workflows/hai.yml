@@ -6,21 +6,17 @@ jobs: # what is it supposed to do?
   build:
     runs-on: ubuntu-latest
 
-    strategy: 
+    strategy:
       matrix:
         python: ["3.7", "3.8", "3.9", "3.10"]
 
-    steps: 
+    steps:
       - uses: actions/checkout@v2
       - name: Setup Python
         uses: actions/setup-python@v2
-        with: 
+        with:
           python-version: ${{matrix.python}}
       - name: install tox and deps
         run: pip install tox
       - name: run tox
         run: tox -e py
-
-
-  steps
-
