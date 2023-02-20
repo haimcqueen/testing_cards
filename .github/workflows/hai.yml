@@ -1,11 +1,26 @@
-
 name: CI # this is just metadata
 
 on: [push, pull_request] # when should this config file run?
 
 jobs: # what is it supposed to do?
   build:
+    runs-on: ubuntu-latest
+
+    strategy: 
+      matrix:
+        python: ["3.7", "3.8", "3.9", "3.10"]
+
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with: 
+          python-version: ${{matrix.python}}
+      - name: install tox and deps
+        run: pip install tox
+      - name: run tox
+        run: tox -e py
 
 
-
+  steps
 
