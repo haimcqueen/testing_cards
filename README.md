@@ -1,7 +1,7 @@
 cards
 =====
 
-[test]
+[test] [test2]
 Project task tracking / todo list
 
 Usage
