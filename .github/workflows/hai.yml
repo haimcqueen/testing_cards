@@ -1,0 +1,11 @@
+
+name: CI # this is just metadata
+
+on: [push, pull_request] # when should this config file run?
+
+jobs: # what is it supposed to do?
+  build:
+
+
+
+
